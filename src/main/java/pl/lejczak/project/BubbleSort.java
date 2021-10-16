@@ -1,5 +1,7 @@
 package pl.lejczak.project;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Maciek
@@ -7,15 +9,22 @@ package pl.lejczak.project;
 
 public class BubbleSort implements SortingFactory{
     
-    public BubbleStructure data;
+    private BubbleStructure data;
+    private int i;
+    private int j;
+
+    private boolean sorted;
     
-    public BubbleSort(String args[]){
-        this.data = createStructure(args);
+    public BubbleSort(){
+        this.sorted = false;
+        this.i = 0;
+        this.j = 0;
+        this.data = createStructure();
     }
     
     @Override
-    public BubbleStructure createStructure(String args[]) {
-        return new BubbleStructure(args);
+    public BubbleStructure createStructure() {
+        return new BubbleStructure();
     }
     
     @Override
@@ -23,13 +32,31 @@ public class BubbleSort implements SortingFactory{
         
         int size = data.getSize();
         
-        for (int i = 0; i < size - 1; i++) {
-            for (int j = 0; j < size - i - 1; j++) {
-
+        for (; i < size - 1; i++) {
+            if (j >= size - i - 1) j = 0;
+            for (; j < size - i - 1; j++) {
                 if (data.getValue(j) > data.getValue(j + 1)) {
                     data.sortStep(j, j + 1);
+                    j++;
+                    return;
                 }
             }
         }
+        sorted = true;
+    }
+    
+    @Override
+    public void setData(ArrayList<Integer> data){
+        this.data.setData(data);
+    }
+    
+    @Override
+    public ArrayList<Integer> getData() {
+        return data.getData();
+    }
+    
+    @Override
+    public boolean isSorted() {
+        return sorted;
     }
 }

@@ -1,5 +1,7 @@
 package pl.lejczak.project;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Maciek
@@ -7,7 +9,9 @@ package pl.lejczak.project;
 
 public interface SortingFactory {
     
-    Structure createStructure(String args[]);
+    Structure createStructure();
     public void sort();
-    
+    public void setData(ArrayList<Integer> data);
+    public ArrayList<Integer> getData();
+    public boolean isSorted();
 }

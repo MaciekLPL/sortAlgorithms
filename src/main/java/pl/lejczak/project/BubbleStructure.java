@@ -10,29 +10,9 @@ import java.util.Collections;
 public class BubbleStructure implements Structure{
     
     private ArrayList<Integer> numbers;
-
-    public BubbleStructure(String[] nums) {
-        
-        this.numbers = new ArrayList<>();
-        
-        for (int i = 0; i < nums.length; i++){
-            
-            try {
-                numbers.add(Integer.parseInt(nums[i]));
-            }
-            catch (NumberFormatException e) {
-                System.out.println("Found incorrect input. Skipping...");
-            }
-        }
-    }
     
-    public void printCurrentState() {
-        
-        System.out.print("| ");
-        
-        for(int i = 0; i < numbers.size(); i++) {
-            System.out.print(numbers.get(i) + " | ");
-        }
+    public BubbleStructure(){
+        this.numbers = new ArrayList<Integer>();
     }
     
     @Override
@@ -48,5 +28,15 @@ public class BubbleStructure implements Structure{
     @Override
     public int getValue(int i){
         return numbers.get(i);
+    }
+    
+    @Override
+    public void setData(ArrayList<Integer> data) {
+        numbers = new ArrayList<Integer>(data);
+    }
+    
+    @Override
+    public ArrayList<Integer> getData() {
+        return numbers;
     }
 }

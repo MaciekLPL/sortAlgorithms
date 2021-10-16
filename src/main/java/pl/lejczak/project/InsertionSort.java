@@ -1,5 +1,7 @@
 package pl.lejczak.project;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Maciek
@@ -7,15 +9,19 @@ package pl.lejczak.project;
 
 public class InsertionSort implements SortingFactory{
     
-    public InsertionStructure data;
+    private InsertionStructure data;
+    private int i;
+    private boolean sorted;
     
-    public InsertionSort(String args[]){
-        this.data = createStructure(args);
+    public InsertionSort() {
+        this.sorted = false;
+        this.i = 1;
+        this.data = createStructure();
     }
     
     @Override
-    public InsertionStructure createStructure(String args[]) {
-        return new InsertionStructure(args);
+    public InsertionStructure createStructure() {
+        return new InsertionStructure();
     }
     
     @Override
@@ -23,15 +29,31 @@ public class InsertionSort implements SortingFactory{
         
         int size = data.getSize();
 
-        for (int i = 1; i < size; i++) {
-            int key = data.getValue(i);
+        for (; i < size; i++) {
+            int k = data.getValue(i);
             int j = i - 1;
 
-            while (j >= 0 && key < data.getValue(j)) {
-                --j;
+            while (j >= 0 && k < data.getValue(j)) {
+                data.sortStep(j, j + 1);
+                --i;
+                return;
             }
-
-            data.sortStep(i, j + 1);
         }
+        sorted = true;
+    }
+    
+    @Override
+    public void setData(ArrayList<Integer> data){
+        this.data.setData(data);
+    }
+    
+    @Override
+    public ArrayList<Integer> getData() {
+        return data.getData();
+    }
+    
+    @Override
+    public boolean isSorted() {
+        return sorted;
     }
 }

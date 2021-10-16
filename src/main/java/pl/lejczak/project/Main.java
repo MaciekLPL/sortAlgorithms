@@ -10,19 +10,16 @@ public class Main {
     
     public static void main(String[] args){
         
-        BubbleSort s1 = new BubbleSort(args);
-        s1.data.printCurrentState();
-        s1.sort();
-        System.out.println("");
-        s1.data.printCurrentState();
+        BubbleSort bs = new BubbleSort();
+
+        InsertionSort is = new InsertionSort();
         
-        System.out.println("");
+        View v = new View();
         
+        Controller c = new Controller(bs, is, v);
         
-        InsertionSort s2 = new InsertionSort(args);
-        s2.data.printCurrentState();
-        s2.sort();
-        System.out.println("");
-        s2.data.printCurrentState();
+        c.loadData(args);
+        c.sortBubble();
+        c.sortInsertion();
     }
 }
