@@ -1,6 +1,7 @@
 package pl.lejczak.project;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -19,4 +20,16 @@ public class View {
         
         System.out.println("");
     }
+    
+    public String[] getNumbers() {
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter integers separated by space: ");
+        String[] input = null;
+        if (scanner.hasNextLine()) {
+            input = scanner.nextLine().split(" ");
+        }
+        return input;
+    }
+    
 }

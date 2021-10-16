@@ -19,22 +19,28 @@ public class Controller {
         
         ArrayList<Integer> numbers = new ArrayList<>();
         
+        validateData(args, numbers);
+        
+        while (numbers.isEmpty()) {
+            this.getDataFromUser(numbers);
+        }
+        
+        this.sendData(numbers);
+    }
+    
+    private void validateData(String[] args, ArrayList<Integer> numbers) {
+        
         for (int i = 0; i < args.length; i++){
             
             try {
                 numbers.add(Integer.parseInt(args[i]));
             }
             catch (NumberFormatException e) {
-                System.out.println("Found incorrect input. Skipping...");
+                System.out.println("Found invalid input. Skipping...");
             }
         }
-        
-        if (numbers.size() == 0) {
-            this.getDataFromUser();
-        }
-        
-        this.sendData(numbers);
     }
+    
     
     private void sendData(ArrayList<Integer> data) {
         
@@ -60,9 +66,8 @@ public class Controller {
         }
     }
     
-    public void getDataFromUser() {
-        
-        
+    private void getDataFromUser(ArrayList<Integer> numbers) {
+        validateData(this.viewHandler.getNumbers(), numbers);
     }
     
 }
