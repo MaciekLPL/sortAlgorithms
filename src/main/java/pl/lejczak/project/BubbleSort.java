@@ -12,7 +12,6 @@ public class BubbleSort implements SortingFactory{
     private BubbleStructure data;
     private int i;
     private int j;
-
     private boolean sorted;
     
     public BubbleSort(){

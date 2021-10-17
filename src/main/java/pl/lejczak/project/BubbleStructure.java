@@ -11,10 +11,6 @@ public class BubbleStructure implements Structure{
     
     private ArrayList<Integer> numbers;
     
-    public BubbleStructure(){
-        this.numbers = new ArrayList<Integer>();
-    }
-    
     @Override
     public void sortStep(int i, int j) {
         Collections.swap(numbers, i, j);
@@ -32,7 +28,7 @@ public class BubbleStructure implements Structure{
     
     @Override
     public void setData(ArrayList<Integer> data) {
-        numbers = new ArrayList<Integer>(data);
+        numbers = new ArrayList<>(data);
     }
     
     @Override

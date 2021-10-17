@@ -11,10 +11,6 @@ public class InsertionStructure implements Structure{
     
     private ArrayList<Integer> numbers;
     
-    public InsertionStructure(){
-        this.numbers = new ArrayList<Integer>();
-    }
-    
     @Override
     public void sortStep(int i, int j) {
         int tmp = numbers.get(i);
@@ -34,7 +30,7 @@ public class InsertionStructure implements Structure{
     
     @Override
     public void setData(ArrayList<Integer> data) {
-        numbers = new ArrayList<Integer>(data);
+        numbers = new ArrayList<>(data);
     }
     
     @Override

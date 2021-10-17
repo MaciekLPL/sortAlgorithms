@@ -31,5 +31,4 @@ public class View {
         }
         return input;
     }
-    
 }

@@ -2,6 +2,11 @@ package pl.lejczak.project;
 
 import java.util.ArrayList;
 
+/**
+ *
+ * @author Maciek
+ */
+
 public class Controller {
     
     private BubbleSort bSort;
@@ -28,6 +33,10 @@ public class Controller {
         this.sendData(numbers);
     }
     
+    private void getDataFromUser(ArrayList<Integer> numbers) {
+        validateData(this.viewHandler.getNumbers(), numbers);
+    }
+    
     private void validateData(String[] args, ArrayList<Integer> numbers) {
         
         for (int i = 0; i < args.length; i++){
@@ -40,7 +49,6 @@ public class Controller {
             }
         }
     }
-    
     
     private void sendData(ArrayList<Integer> data) {
         
@@ -64,10 +72,5 @@ public class Controller {
             this.viewHandler.printCurrentState(this.iSort.getData());
             this.iSort.sort();
         }
-    }
-    
-    private void getDataFromUser(ArrayList<Integer> numbers) {
-        validateData(this.viewHandler.getNumbers(), numbers);
-    }
-    
+    } 
 }
