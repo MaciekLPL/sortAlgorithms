@@ -1,6 +1,7 @@
 package pl.lejczak.project;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -34,7 +35,15 @@ public class Controller {
     }
     
     private void getDataFromUser(ArrayList<Integer> numbers) {
-        validateData(this.viewHandler.getNumbers(), numbers);
+        
+        this.viewHandler.getNumbers();
+        Scanner scanner = new Scanner(System.in);
+        String[] input = null;
+        if (scanner.hasNextLine()) {
+            input = scanner.nextLine().split(" ");
+        }
+        
+        validateData(input, numbers);
     }
     
     private void validateData(String[] args, ArrayList<Integer> numbers) {
