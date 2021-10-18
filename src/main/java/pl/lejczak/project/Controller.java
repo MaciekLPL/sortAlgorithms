@@ -36,7 +36,7 @@ public class Controller {
     
     private void getDataFromUser(ArrayList<Integer> numbers) {
         
-        this.viewHandler.getNumbers();
+        this.viewHandler.printMessage("Enter integers separated by space: ");
         Scanner scanner = new Scanner(System.in);
         String[] input = null;
         if (scanner.hasNextLine()) {
@@ -54,7 +54,7 @@ public class Controller {
                 numbers.add(Integer.parseInt(args[i]));
             }
             catch (NumberFormatException e) {
-                System.out.println("Found invalid input. Skipping...");
+                this.viewHandler.printMessage("Found invalid input. Skipping...");
             }
         }
     }
@@ -66,7 +66,7 @@ public class Controller {
     }
     
     public void sortBubble() {
-        System.out.println("BubbleSort");
+        this.viewHandler.printMessage("BubbleSort");
         
         while(!this.bSort.isSorted()) {
             this.viewHandler.printCurrentState(this.bSort.getData());
@@ -75,11 +75,11 @@ public class Controller {
     }
     
     public void sortInsertion() {
-        System.out.println("InsertionSort");
+        this.viewHandler.printMessage("InsertionSort");
         
         while(!this.iSort.isSorted()) {
             this.viewHandler.printCurrentState(this.iSort.getData());
             this.iSort.sort();
         }
-    } 
+    }
 }

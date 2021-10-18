@@ -20,7 +20,7 @@ public class View {
         System.out.println("");
     }
     
-    public void getNumbers() {
-        System.out.println("Enter integers separated by space: ");
+    public void printMessage(String message) {
+        System.out.println(message);
     }
 }
