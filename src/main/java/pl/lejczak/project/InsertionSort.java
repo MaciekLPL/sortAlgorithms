@@ -12,10 +12,12 @@ public class InsertionSort implements SortingFactory{
     private InsertionStructure data;
     private int i;
     private boolean sorted;
+    private String name;
     
     public InsertionSort() {
         this.sorted = false;
         this.i = 1;
+        this.name = "Insertion Sort";
         this.data = createStructure();
     }
     
@@ -55,5 +57,9 @@ public class InsertionSort implements SortingFactory{
     @Override
     public boolean isSorted() {
         return sorted;
+    }
+    
+    public String getName() {
+        return this.name;
     }
 }

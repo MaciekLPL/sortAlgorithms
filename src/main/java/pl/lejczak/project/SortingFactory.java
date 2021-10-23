@@ -14,4 +14,5 @@ public interface SortingFactory {
     public void setData(ArrayList<Integer> data);
     public ArrayList<Integer> getData();
     public boolean isSorted();
+    public String getName();
 }

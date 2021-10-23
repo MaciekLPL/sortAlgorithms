@@ -15,7 +15,8 @@ public class Main {
         Controller c = new Controller(bs, is, v);
         
         c.loadData(args);
-        c.sortBubble();
-        c.sortInsertion();
+        c.executeSort(bs);
+        c.executeSort(is);
+       
     }
 }

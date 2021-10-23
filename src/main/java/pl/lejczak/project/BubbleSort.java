@@ -13,11 +13,13 @@ public class BubbleSort implements SortingFactory{
     private int i;
     private int j;
     private boolean sorted;
+    private String name;
     
     public BubbleSort(){
         this.sorted = false;
         this.i = 0;
         this.j = 0;
+        this.name = "Bubble Sort";
         this.data = createStructure();
     }
     
@@ -57,5 +59,9 @@ public class BubbleSort implements SortingFactory{
     @Override
     public boolean isSorted() {
         return sorted;
+    }
+    
+    public String getName() {
+        return this.name;
     }
 }
