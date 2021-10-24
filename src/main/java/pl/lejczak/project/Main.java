@@ -1,12 +1,17 @@
 package pl.lejczak.project;
 
 /**
- *
- * @author Maciek
+ * Main class, contains main function.
+ * @author Maciej Lejczak
  */
 
 public class Main {
-    
+    /**
+     * Main function.
+     * Creates objects, calls controller.
+     * As parameters accepts only integers, which are meant to be sorted.
+     * @param args integers separated by space
+     */
     public static void main(String[] args){
         
         BubbleSort bs = new BubbleSort();

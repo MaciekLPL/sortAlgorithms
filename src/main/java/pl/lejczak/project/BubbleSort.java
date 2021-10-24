@@ -3,18 +3,31 @@ package pl.lejczak.project;
 import java.util.ArrayList;
 
 /**
- *
- * @author Maciek
+ * Implements sorting algorithm - Bubble sort.
+ * Needs BubbleStructure as the component.
+ * @author Maciej Lejczak
  */
 
 public class BubbleSort implements SortingFactory{
     
+    /** Data structure of the algorithm */
     private BubbleStructure data;
+    /** Stores algorithm iteration status */
     private int i;
+    /** Stores algorithm iteration status */
     private int j;
+    /**
+     * Stores sort status. 
+     * Initialized with False, set to True at the end of sorting.
+     */
     private boolean sorted;
+    /** Name of algorithm */
     private String name;
     
+    /**
+     * Constructor of Bubble Sort algorithm.
+     * Sets all the properties needed by algorithm.
+     */
     public BubbleSort(){
         this.sorted = false;
         this.i = 0;
@@ -23,11 +36,18 @@ public class BubbleSort implements SortingFactory{
         this.data = createStructure();
     }
     
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public BubbleStructure createStructure() {
         return new BubbleStructure();
     }
     
+    /**
+     * Bubble sort algorithm implementation.
+     * After any reordering in the structure, it returns to controller.
+     */
     @Override
     public void sort(){
         
@@ -46,21 +66,36 @@ public class BubbleSort implements SortingFactory{
         sorted = true;
     }
     
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public void setData(ArrayList<Integer> data){
+    public void setData(ArrayList<Integer> data) throws EmptyDataException {
+        if (data.isEmpty())
+            throw new EmptyDataException();
         this.data.setData(data);
     }
     
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public ArrayList<Integer> getData() {
         return data.getData();
     }
     
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isSorted() {
         return sorted;
     }
     
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public String getName() {
         return this.name;
     }

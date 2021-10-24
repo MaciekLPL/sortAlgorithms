@@ -3,12 +3,16 @@ package pl.lejczak.project;
 import java.util.ArrayList;
 
 /**
- *
- * @author Maciek
+ * Used to print information in console.
+ * @author Maciej Lejczak
  */
 
 public class View {
     
+    /**
+     * Prints current state of array of numbers.
+     * @param data array with numbers
+     */
     public void printCurrentState(ArrayList<Integer> data) {
         
         System.out.print("| ");
@@ -20,6 +24,10 @@ public class View {
         System.out.println("");
     }
     
+    /**
+     * Prints message passed as parameter in the console.
+     * @param message message to be printed
+     */
     public void printMessage(String message) {
         System.out.println(message);
     }
