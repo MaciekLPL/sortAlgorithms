@@ -6,6 +6,7 @@ import java.util.Collections;
 /**
  * Bubble sort structure implements place swapping function.
  * @author Maciej Lejczak
+ * @version 1.0
  */
 
 public class BubbleStructure implements Structure{

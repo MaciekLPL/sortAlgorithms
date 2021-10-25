@@ -3,6 +3,7 @@ package pl.lejczak.project;
 /**
  * Main class, contains main function.
  * @author Maciej Lejczak
+ * @version 1.0
  */
 
 public class Main {

@@ -29,29 +29,31 @@ pl.lejczak.project
 'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/BubbleSort.java'
 'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/BubbleStructure.java'
 'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/Controller.java'
+'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/EmptyDataException.java'
 'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/InsertionSort.java'
 'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/InsertionStructure.java'
 'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/Main.java'
 'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/SortingFactory.java'
 'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/Structure.java'
 'C:/Users/Maciek/Documents/NetBeansProjects/sortAlgorithms/src/main/java/pl/lejczak/project/View.java'
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\src\main\java = 1634317822056
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\allclasses-index.html = 1635008568135
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\allclasses.html = 1635008568148
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\allpackages-index.html = 1635008568138
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\constant-values.html = 1635008567952
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\deprecated-list.html = 1635008568145
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\element-list = 1635008567922
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\help-doc.html = 1635008568159
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\index-all.html = 1635008568127
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\index.html = 1635008568153
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\member-search-index.js = 1635008568122
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\member-search-index.zip = 1635008568124
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\overview-tree.html = 1635008568044
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\package-search-index.js = 1635008568075
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\package-search-index.zip = 1635008568111
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\script.js = 1635008568168
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\search.js = 1635008568175
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\stylesheet.css = 1635008568165
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\type-search-index.js = 1635008568117
-C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\type-search-index.zip = 1635008568120
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\src\main\java = 1634630459872
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\allclasses-index.html = 1635182471088
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\allclasses.html = 1635182471106
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\allpackages-index.html = 1635182471092
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\constant-values.html = 1635182470801
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\deprecated-list.html = 1635182471101
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\element-list = 1635182470759
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\help-doc.html = 1635182471119
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\index-all.html = 1635182471071
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\index.html = 1635182471111
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\member-search-index.js = 1635182471067
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\member-search-index.zip = 1635182471069
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\overview-tree.html = 1635182470983
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\package-search-index.js = 1635182471030
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\package-search-index.zip = 1635182471062
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\script.js = 1635182471134
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\search.js = 1635182471140
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\serialized-form.html = 1635182470820
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\stylesheet.css = 1635182471127
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\type-search-index.js = 1635182471064
+C:\Users\Maciek\Documents\NetBeansProjects\sortAlgorithms\target\site\apidocs\type-search-index.zip = 1635182471065

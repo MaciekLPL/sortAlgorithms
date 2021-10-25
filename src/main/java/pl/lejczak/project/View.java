@@ -3,8 +3,9 @@ package pl.lejczak.project;
 import java.util.ArrayList;
 
 /**
- * Used to print information in console.
+ * Used to print informations in console.
  * @author Maciej Lejczak
+ * @version 1.0
  */
 
 public class View {

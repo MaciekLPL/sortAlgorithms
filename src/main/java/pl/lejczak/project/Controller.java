@@ -6,6 +6,7 @@ import java.util.Scanner;
 /**
  * Manages the work and communication between the Model and the View.
  * @author Maciej Lejczak
+ * @version 1.0
  */
 public class Controller {
     /** Stores Bubble sort algorithm - Model */
@@ -85,12 +86,8 @@ public class Controller {
      * @param data array with numbers to be sorted
      */
     private void sendData(ArrayList<Integer> data) {
-        try {
             this.bSort.setData(data);
             this.iSort.setData(data);
-        } catch (EmptyDataException ex) {
-            this.viewHandler.printMessage("Empty data passed to model");
-        }
     }
     
     /**
@@ -99,11 +96,17 @@ public class Controller {
      * @param sortAlgorithm sorting algorithm to be invoked
      */
     public void executeSort(SortingFactory sortAlgorithm) {
-        this.viewHandler.printMessage(sortAlgorithm.getName());
-        
-        while(!sortAlgorithm.isSorted()) {
+        try {
+            this.viewHandler.printMessage(sortAlgorithm.getName());
+            
+            while(!sortAlgorithm.isSorted()) {
             this.viewHandler.printCurrentState(sortAlgorithm.getData());
-            sortAlgorithm.sort();
+                sortAlgorithm.sort();
+            }
+            
+        } catch (EmptyDataException ex) {
+            this.viewHandler.printMessage("Empty data detected. Sort stopped.");
+            return;
         }
     }
 }

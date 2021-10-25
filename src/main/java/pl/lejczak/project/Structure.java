@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * It is used to create sorting algorithm.
  * It stores data and defines the operations performed by the algorithm on the data.
  * @author Maciej Lejczak
+ * @version 1.0
  */
 
 public interface Structure {

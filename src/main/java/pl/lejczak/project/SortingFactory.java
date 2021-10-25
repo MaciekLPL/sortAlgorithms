@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Creates products, which are sorting algorithms.
  * Needs sorting structure as the component.
  * @author Maciej Lejczak
+ * @version 1.0
  */
 
 public interface SortingFactory {
@@ -23,14 +24,14 @@ public interface SortingFactory {
     /**
      * Setter of data structure.
      * @param data array to be transferred to data structure
-     * @throws EmptyDataException Thrown when data passed as parameter is empty
      */
-    public void setData(ArrayList<Integer> data) throws EmptyDataException;
+    public void setData(ArrayList<Integer> data);
     /**
      * Getter of array.
      * @return array
+     * @throws EmptyDataException Thrown when blank data detected.
      */
-    public ArrayList<Integer> getData();
+    public ArrayList<Integer> getData() throws EmptyDataException;
     /**
      * Getter of information about sorting status.
      * @return information whether the sorting algorithm has completed all iterations

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  * Insertion sort structure implements number insertion into the given position.
  * @author Maciej Lejczak
+ * @version 1.0
  */
 
 public class InsertionStructure implements Structure{

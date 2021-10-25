@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Implements sorting algorithm - Insertion sort.
  * Needs InsertionStructure as the component.
  * @author Maciej Lejczak
+ * @version 1.0
  */
 
 public class InsertionSort implements SortingFactory{
@@ -66,9 +67,7 @@ public class InsertionSort implements SortingFactory{
      * {@inheritDoc}
      */
     @Override
-    public void setData(ArrayList<Integer> data) throws EmptyDataException {
-        if (data.isEmpty())
-            throw new EmptyDataException();
+    public void setData(ArrayList<Integer> data) {
         this.data.setData(data);
     }
     
@@ -76,7 +75,9 @@ public class InsertionSort implements SortingFactory{
      * {@inheritDoc}
      */
     @Override
-    public ArrayList<Integer> getData() {
+    public ArrayList<Integer> getData() throws EmptyDataException {
+        if (data.getSize() == 0)
+            throw new EmptyDataException();
         return data.getData();
     }
     
