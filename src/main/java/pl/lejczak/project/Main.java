@@ -1,5 +1,8 @@
 package pl.lejczak.project;
 
+import pl.lejczak.project.view.View;
+import pl.lejczak.project.controller.Controller;
+
 /**
  * Main class, contains main function.
  * @author Maciej Lejczak
@@ -15,14 +18,13 @@ public class Main {
      */
     public static void main(String[] args){
         
-        BubbleSort bs = new BubbleSort();
-        InsertionSort is = new InsertionSort(); 
         View v = new View();
-        Controller c = new Controller(bs, is, v);
+        Controller c = new Controller(v);
+        
+        c.addAlgorithm("BubbleSort");
+        c.addAlgorithm("InsertionSort");
         
         c.loadData(args);
-        c.executeSort(bs);
-        c.executeSort(is);
-       
+        c.executeSort();
     }
 }

@@ -11,10 +11,24 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <name>sortAlgorithms</name>
-	<build>
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.2.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-params</artifactId>
+      <version>5.6.0</version>
+      <scope>test</scope>
+      <type>jar</type>
+    </dependency>
+</dependencies>
+<build>
   <plugins>
     <plugin>
-      <!-- Build an executable JAR -->
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-jar-plugin</artifactId>
       <version>3.1.0</version>
@@ -28,7 +42,18 @@
         </archive>
       </configuration>
     </plugin>
+    <plugin>
+	<artifactId>maven-surefire-plugin</artifactId>
+	<version>2.19.1</version>
+	<dependencies>
+                <dependency>
+                    <groupId>org.junit.platform</groupId>
+                    <artifactId>junit-platform-surefire-provider</artifactId>
+                    <version>1.1.0</version>
+                </dependency>
+	</dependencies>
+    </plugin>
   </plugins>
-</build>
+ </build>
 
 </project>
