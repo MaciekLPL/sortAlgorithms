@@ -10,7 +10,7 @@ import pl.lejczak.project.model.*;
  * @version 1.0
  */
 public class ProviderTest {
-    
+    /** Provider test object */
     private static AlgorithmProvider provider;
     
     @BeforeAll
@@ -18,21 +18,30 @@ public class ProviderTest {
         provider = new AlgorithmProvider();
     }
     
-    
+    /**
+     * Tests creator of bubble sort algorithm - case sensitivity.
+     * @param name name of algorithm passed to function
+     */
     @ParameterizedTest
     @ValueSource(strings = {"BubbleSort", "bubblesort", "BUBBLESORT"})
     public void testBubbleCreator(String name) {  
         SortingAlgorithm result = provider.createAlgorithm(name);
         assertTrue(result instanceof BubbleSort, "Provider did not create object of proper type"); 
     }
-    
+    /**
+     * Tests creator of insertion sort algorithm - case sensitivity.
+     * @param name name of algorithm passed to function
+     */
     @ParameterizedTest
     @ValueSource(strings = {"InsertionSort", "insertionsort", "INSERTIONSORT"})
     public void testInsertionCreator(String name) {  
         SortingAlgorithm result = provider.createAlgorithm(name);
         assertTrue(result instanceof InsertionSort, "Provider did not create object of proper type"); 
     }
-    
+    /**
+     * Tests creator with incorrect values.
+     * @param name name of algorithm passed to function
+     */
     @ParameterizedTest
     @ValueSource(strings = {"bubble", "InsertionSor", "null", "nazwa", "435435", "12.3"})
     public void testNullCreator(String name) {  

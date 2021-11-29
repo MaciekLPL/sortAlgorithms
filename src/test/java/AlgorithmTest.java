@@ -15,16 +15,24 @@ import pl.lejczak.project.model.*;
  * @version 1.0
  */
 public class AlgorithmTest {
-    
+    /** BubbleSort test object */
     private BubbleSort bs;
+    /** InseritonSort test object */
     private InsertionSort is;
     
+    /**
+     * Creates new instances of sorting algorithms before each test.
+     */
     @BeforeEach
     public void reset() {
         bs = new BubbleSort();
         is = new InsertionSort();
     }
     
+    /**
+     * Exception test, checks if exception is thrown at empty data pass.
+     * @param list empty arrays to be checked
+     */
     @ParameterizedTest
     @MethodSource("emptyArrayLists")
     public void testException(ArrayList<Integer> list) {
@@ -42,6 +50,10 @@ public class AlgorithmTest {
         }
     }
     
+    /**
+     * Bubbles sort algorithm test, checks if numbers are sorted properly.
+     * @param list array to be sorted.
+     */
     @ParameterizedTest
     @MethodSource("properArrayLists")
     public void testInsertionSort(ArrayList<Integer> list) {
@@ -62,6 +74,10 @@ public class AlgorithmTest {
 
     }
     
+    /**
+     * Insertion sort algorithm test, checks if numbers are sorted properly.
+     * @param list array to be sorted.
+     */
     @ParameterizedTest
     @MethodSource("properArrayLists")
     public void testBubbleSort(ArrayList<Integer> list) {
@@ -80,7 +96,10 @@ public class AlgorithmTest {
         }
     }
     
-    
+    /**
+     * Creates stream of empty arrays as arguments for tests.
+     * @return Stream with empty arrays
+     */
     static Stream<Arguments> emptyArrayLists() {
         ArrayList<Integer> al = new ArrayList<>();
         al.add(1);
@@ -91,6 +110,10 @@ public class AlgorithmTest {
             Arguments.of(al));
     }
     
+    /**
+     * Creates stream of arrays with valid data as arguments for tests.
+     * @return Stream with correct arrays
+     */
     static Stream<Arguments> properArrayLists() {
         
         return Stream.of(

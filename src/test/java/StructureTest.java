@@ -14,16 +14,25 @@ import pl.lejczak.project.model.*;
  */
 public class StructureTest {
     
+    /** BubbleStructure test object */
     private BubbleStructure bs;
+    /** InsertionStructure test object */
     private InsertionStructure is;
     
+    /**
+     * Creates new instances of structures for sorting algorithms before each test.
+     */
     @BeforeEach
     public void reset() {
         bs = new BubbleStructure();
         is = new InsertionStructure();
     }
     
-    
+    /**
+     * Bubble sort algorithm step test, checks if elements are moved correctly.
+     * @param i index of element to be moved
+     * @param j index where element should be moves
+     */
     @ParameterizedTest
     @MethodSource("properArrayLists")
     public void testBubbleStructure(int i, int j, ArrayList<Integer> list) {
@@ -39,7 +48,11 @@ public class StructureTest {
         assertEquals(bs.getSize(), size, "Size is not the same");
 
     }
-    
+    /**
+     * Insertion sort algorithm step test, checks if elements are moved correctly.
+     * @param i index of element to be moved
+     * @param j index where element should be moves
+     */
     @ParameterizedTest
     @MethodSource("properArrayLists")
     public void testInsertionSort(int i, int j, ArrayList<Integer> list) {
@@ -56,7 +69,10 @@ public class StructureTest {
 
     }
     
-    
+    /**
+     * Creates stream of arrays with valid data as arguments for tests.
+     * @return Stream with correct arrays
+     */
     static Stream<Arguments> properArrayLists() {
         
         return Stream.of(

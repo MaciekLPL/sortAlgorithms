@@ -18,7 +18,7 @@ public class View {
         
         System.out.print("| ");
         
-        data.stream().forEach(i -> System.out.print(i + " | "));
+        data.stream().map(str -> str + " | ").forEach(System.out::print);
         
         System.out.println();
     }
