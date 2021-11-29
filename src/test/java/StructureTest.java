@@ -1,3 +1,5 @@
+import pl.lejczak.project.model.InsertionStructure;
+import pl.lejczak.project.model.BubbleStructure;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Stream;
@@ -5,7 +7,6 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
-import pl.lejczak.project.model.*;
 
 /**
  * Structure test.

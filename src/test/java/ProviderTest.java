@@ -1,8 +1,11 @@
+import pl.lejczak.project.model.SortingAlgorithm;
+import pl.lejczak.project.model.InsertionSort;
+import pl.lejczak.project.model.BubbleSort;
+import pl.lejczak.project.model.AlgorithmProvider;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
-import pl.lejczak.project.model.*;
 
 /**
  * AlgorithmProvider tests

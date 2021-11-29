@@ -1,3 +1,5 @@
+import pl.lejczak.project.model.InsertionSort;
+import pl.lejczak.project.model.BubbleSort;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -7,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 import pl.lejczak.project.EmptyDataException;
-import pl.lejczak.project.model.*;
 
 /**
  * Sorting algorithm test.
