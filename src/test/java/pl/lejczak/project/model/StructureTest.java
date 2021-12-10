@@ -1,5 +1,5 @@
-import pl.lejczak.project.model.InsertionStructure;
-import pl.lejczak.project.model.BubbleStructure;
+package pl.lejczak.project.model;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Stream;
@@ -33,6 +33,7 @@ public class StructureTest {
      * Bubble sort algorithm step test, checks if elements are moved correctly.
      * @param i index of element to be moved
      * @param j index where element should be moves
+     * @param list array to be checked
      */
     @ParameterizedTest
     @MethodSource("properArrayLists")
@@ -53,6 +54,7 @@ public class StructureTest {
      * Insertion sort algorithm step test, checks if elements are moved correctly.
      * @param i index of element to be moved
      * @param j index where element should be moves
+     * @param list array to be checked
      */
     @ParameterizedTest
     @MethodSource("properArrayLists")

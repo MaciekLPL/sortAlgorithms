@@ -101,4 +101,14 @@ public class BubbleSort implements SortingAlgorithm{
     public String getName() {
         return this.name;
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void reset() {
+        this.sorted = false;
+        this.i = 0;
+        this.j = 0;
+    }
 }

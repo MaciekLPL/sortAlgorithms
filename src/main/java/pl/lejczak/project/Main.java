@@ -24,7 +24,8 @@ public class Main {
         c.addAlgorithm("BubbleSort");
         c.addAlgorithm("InsertionSort");
         
-        c.loadData(args);
-        c.executeSort();
+        if (c.loadData(args)){
+            c.initController();
+        }
     }
 }

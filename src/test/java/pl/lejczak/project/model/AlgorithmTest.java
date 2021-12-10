@@ -1,5 +1,5 @@
-import pl.lejczak.project.model.InsertionSort;
-import pl.lejczak.project.model.BubbleSort;
+package pl.lejczak.project.model;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -32,7 +32,7 @@ public class AlgorithmTest {
     
     /**
      * Exception test, checks if exception is thrown at empty data pass.
-     * @param list empty arrays to be checked
+     * @param list empty array to be checked
      */
     @ParameterizedTest
     @MethodSource("emptyArrayLists")

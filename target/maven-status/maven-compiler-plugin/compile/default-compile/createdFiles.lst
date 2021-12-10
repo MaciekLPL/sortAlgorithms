@@ -1,11 +1,13 @@
+pl\lejczak\project\controller\Controller$1.class
 pl\lejczak\project\model\AlgorithmProvider.class
 pl\lejczak\project\model\InsertionStructure.class
-pl\lejczak\project\model\BubbleStructure.class
-pl\lejczak\project\Main.class
-pl\lejczak\project\model\SortingAlgorithm.class
 pl\lejczak\project\EmptyDataException.class
 pl\lejczak\project\controller\Controller.class
 pl\lejczak\project\model\BubbleSort.class
 pl\lejczak\project\model\InsertionSort.class
 pl\lejczak\project\model\Structure.class
+pl\lejczak\project\model\BubbleStructure.class
+pl\lejczak\project\view\BarChart.class
+pl\lejczak\project\Main.class
+pl\lejczak\project\model\SortingAlgorithm.class
 pl\lejczak\project\view\View.class

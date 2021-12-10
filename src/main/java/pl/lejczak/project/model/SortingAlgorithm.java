@@ -43,4 +43,9 @@ public interface SortingAlgorithm {
      * @return name of algorithm
      */
     public String getName();
+    
+    /**
+     * Resets algorithm and its data.
+     */
+    public void reset();
 }
