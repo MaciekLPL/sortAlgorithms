@@ -8,8 +8,9 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Maciek
+ * BarChart reprezentation used in GUI
+ * @author Maciej Lejczak
+ * @version 1.0
  */
 public class BarChart extends JPanel{
 

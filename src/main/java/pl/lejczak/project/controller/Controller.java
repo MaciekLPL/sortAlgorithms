@@ -5,8 +5,6 @@ import java.awt.event.ActionListener;
 import pl.lejczak.project.view.View;
 import pl.lejczak.project.EmptyDataException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.Timer;
 import pl.lejczak.project.model.AlgorithmProvider;
 import pl.lejczak.project.model.SortingAlgorithm;

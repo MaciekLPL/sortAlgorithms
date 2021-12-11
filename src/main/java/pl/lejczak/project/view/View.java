@@ -84,11 +84,6 @@ public class View {
         
     }
     
-    public void loadChart(ArrayList<Integer> data) {
-        chart = new BarChart(data);
-        frame.add(chart);
-    }
-    
     public void repaint(ArrayList<Integer> data) {
         chart.updateList(data);
         frame.repaint();
