@@ -24,8 +24,13 @@ public class Main {
         c.addAlgorithm("BubbleSort");
         c.addAlgorithm("InsertionSort");
         
-        if (c.loadData(args)){
-            c.initController();
-        }
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                if (c.loadData(args)){
+                    c.initController();
+                }
+            }
+        });
     }
 }

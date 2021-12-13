@@ -1,7 +1,6 @@
 package pl.lejczak.project.controller;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import pl.lejczak.project.view.View;
 import pl.lejczak.project.EmptyDataException;
 import java.util.ArrayList;
@@ -49,7 +48,7 @@ public class Controller {
         });
 
         viewHandler.getResetBtn().addActionListener(e -> resetSorting());
-        
+        viewHandler.getPauseBtn().addActionListener(e -> pauseSorting());
         viewHandler.bubbleRadioBtn().addActionListener(e -> display());
         viewHandler.insertionRadioBtn().addActionListener(e -> display());
     }
@@ -58,6 +57,8 @@ public class Controller {
      * Resets currently displayed algorithm according to radio button selection
      */
     public void resetSorting() {
+        
+        pauseSorting();
         SortingAlgorithm a = selectAlgorithm();
         if (a == null) {
             return;
@@ -69,7 +70,15 @@ public class Controller {
         try {
             viewHandler.repaint(a.getData());
         } catch (EmptyDataException ex) {
-            viewHandler.printMessage("Empty data detected. Sort stopped.");
+            viewHandler.errorDialog("Empty data detected. Sort stopped.");
+        }
+    }
+    
+    public void pauseSorting() {
+        
+        if (timer != null && timer.isRunning()){
+            timer.stop();
+            viewHandler.enableAfterSorting();
         }
     }
     
@@ -78,6 +87,7 @@ public class Controller {
      */
     public void display() {
         
+        pauseSorting();
         SortingAlgorithm a = selectAlgorithm();
         if (a == null) {
             return;
@@ -86,7 +96,7 @@ public class Controller {
         try {
             viewHandler.repaint(a.getData());
         } catch (EmptyDataException ex) {
-            viewHandler.printMessage("Empty data detected. Sort stopped.");
+            viewHandler.errorDialog("Empty data detected. Sort stopped.");
         }
         
     }
@@ -103,7 +113,7 @@ public class Controller {
         if (createdAlgorithm != null) {
             this.algorithms.add(createdAlgorithm);
         } else {
-            viewHandler.printMessage("Could not created algorithm with given name");
+            viewHandler.errorDialog("Could not created algorithm with given name");
         }
     }
 
@@ -163,7 +173,9 @@ public class Controller {
             try {
                 numbers.add(Integer.parseInt(arg));
             } catch (NumberFormatException e) {
-                this.viewHandler.printMessage("Found invalid input. Skipping...");
+                numbers.clear();
+                viewHandler.errorDialog("There were invalid values in your input! Try again.");
+                break;
             }
         }
     }
@@ -186,23 +198,20 @@ public class Controller {
             return;
         }
 
-        timer = new Timer(500, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                if (a.isSorted()) {
-                    ((Timer) e.getSource()).stop();
-                    viewHandler.enableAfterSorting();
-                } else {
-                    a.sort();
-                    viewHandler.disableWhenSorting();
-                }
-                
-                try {
-                    viewHandler.repaint(a.getData());
-                } catch (EmptyDataException ex) {
-                    viewHandler.printMessage("Empty data detected. Sort stopped.");
-                }
+        timer = new Timer(300, (ActionEvent e) -> {
+            if (a.isSorted()) {
+                ((Timer) e.getSource()).stop();
+                viewHandler.enableAfterSorting();
+            } else {
+                a.sort();
+                viewHandler.disableWhenSorting();
+            }
+            
+            try {
+                viewHandler.repaint(a.getData());
+                //viewHandler.addRowToTable(a.getData());
+            } catch (EmptyDataException ex) {
+                viewHandler.errorDialog("Empty data detected. Sort stopped.");
             }
         });
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="pl.lejczak.project.model.AlgorithmTest" time="0.074" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="pl.lejczak.project.model.AlgorithmTest" time="0.076" tests="12" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.12+8-LTS-237"/>
@@ -63,16 +63,16 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testException{ArrayList}[1]" classname="pl.lejczak.project.model.AlgorithmTest" time="0.03"/>
+  <testcase name="testException{ArrayList}[1]" classname="pl.lejczak.project.model.AlgorithmTest" time="0.031"/>
   <testcase name="testException{ArrayList}[2]" classname="pl.lejczak.project.model.AlgorithmTest" time="0"/>
   <testcase name="testBubbleSort{ArrayList}[1]" classname="pl.lejczak.project.model.AlgorithmTest" time="0.002"/>
   <testcase name="testBubbleSort{ArrayList}[2]" classname="pl.lejczak.project.model.AlgorithmTest" time="0.001"/>
   <testcase name="testBubbleSort{ArrayList}[3]" classname="pl.lejczak.project.model.AlgorithmTest" time="0.001"/>
   <testcase name="testBubbleSort{ArrayList}[4]" classname="pl.lejczak.project.model.AlgorithmTest" time="0"/>
   <testcase name="testBubbleSort{ArrayList}[5]" classname="pl.lejczak.project.model.AlgorithmTest" time="0"/>
-  <testcase name="testInsertionSort{ArrayList}[1]" classname="pl.lejczak.project.model.AlgorithmTest" time="0"/>
-  <testcase name="testInsertionSort{ArrayList}[2]" classname="pl.lejczak.project.model.AlgorithmTest" time="0.001"/>
-  <testcase name="testInsertionSort{ArrayList}[3]" classname="pl.lejczak.project.model.AlgorithmTest" time="0.001"/>
+  <testcase name="testInsertionSort{ArrayList}[1]" classname="pl.lejczak.project.model.AlgorithmTest" time="0.001"/>
+  <testcase name="testInsertionSort{ArrayList}[2]" classname="pl.lejczak.project.model.AlgorithmTest" time="0"/>
+  <testcase name="testInsertionSort{ArrayList}[3]" classname="pl.lejczak.project.model.AlgorithmTest" time="0"/>
   <testcase name="testInsertionSort{ArrayList}[4]" classname="pl.lejczak.project.model.AlgorithmTest" time="0"/>
   <testcase name="testInsertionSort{ArrayList}[5]" classname="pl.lejczak.project.model.AlgorithmTest" time="0"/>
 </testsuite>
