@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: pl.lejczak.project.model.StructureTest
--------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec - in pl.lejczak.project.model.StructureTest
